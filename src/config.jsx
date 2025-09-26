@@ -1,5 +1,3 @@
-// export const API_URL = "https://real-ashely-mithun-portfolio-293d7075.koyeb.app"
-
 const isProduction = import.meta.env.VITE_API_URL
 console.log(isProduction);
 
