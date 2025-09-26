@@ -80,6 +80,25 @@ $accent-color: color.scale(#654520 , $lightness: 10%);
     }
 }
 
+.resume-button {
+    display: inline-block;
+    padding: 12px 1.5rem;
+    margin-left: 20px;
+    background: $white;
+    color: $dark-brown;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    border: 2px solid $dark-brown;
+
+    &:hover {
+        background-color: $dark-brown;
+        color: $white;
+        // border: 2px solid $dark-brown;
+    }
+}
+
 // Unique hero image container design
 .hero-image-container {
     position: relative;

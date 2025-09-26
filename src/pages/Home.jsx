@@ -9,20 +9,26 @@ export const Home = () => {
             <div className="container-home">
                 <div className="hero">
                     <div className="hero-content">
+                        <h1 className="hero-title">Hi, I'm</h1>
                         <h1 className="hero-title">MITHUN YADAV</h1>
                         <p className="hero-text">
-                        Hi, I'm a Full Stack Developer with a passion for 
-                        building responsive web applications. 
+                            A Full Stack Developer & UI/UX Designer with a passion for
+                            building responsive and good looking applications which can
+                            provide best user experience.
                         </p>
                         <NavLink to="/about" className="cta-button">
                             KNOW MORE
                         </NavLink>
+                        <a className='resume-button' href="https://drive.google.com/uc?export=download&id=1fKbZAOn8seh1xC2fX0OTCwa0_n1X7vpi" download="resume.pdf">
+                    VIEW RESUME
+                    </a>
+
                     </div>
                     <div className="hero-image-container">
                         <img src={character} alt="Beautiful woman with crown" />
                     </div>
                 </div>
-                
+
                 {/* Decorative elements */}
                 <div className="decorative-dots dot-1"></div>
                 <div className="decorative-dots dot-2"></div>

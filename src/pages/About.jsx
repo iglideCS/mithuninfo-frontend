@@ -6,10 +6,10 @@ import hobby from '../images/hobby.webp';
 
 
 export const About = () => {
-    const skills = [
-        { name: 'MERN', percentage: 80 },
-        { name: 'C++', percentage: 70 },
-        { name: 'PYTHON', percentage: 75 }
+      const skills = [
+        {name: "Figma", percentage: 90},
+        { name: 'MERN', percentage: 85 },
+        { name: 'C++', percentage: 60 }
     ];
     return (
         <section>
@@ -26,12 +26,9 @@ export const About = () => {
 
                     <div className="introduction-para" >
                         <p>
-                            Hi, I'm Mithun Yadav, a passionate Full Stack Developer
-                            with a focus on creating dynamic and responsive web applications.
-                            I specialize in the MERN stack (MongoDB, Express.js, React.js, and
-                            Node.js). I enjoy tackling complex problems and building efficient,
-                            user-friendly solutions. I'm always eager to explore new technologies
-                            and continuously enhance my development skills by working on innovative projects.
+                            Hi, I'm Mithun Yadav, a passionate Full Stack Developer and UI/UX wireframe and prototype designer
+                            with a focus on creating dynamic and responsive web applications & desgin.
+                            I specialize in the MERN stack & prototyping and wireframing via Figma. I just love creating and desgining something new from scratch.
                         </p>
                     </div>
                 </div>
@@ -47,11 +44,7 @@ export const About = () => {
 
                     <div className="education-para" >
                         <p>
-                            I completed my high school in 2019 from the CBSE board,
-                            achieving 82.6% marks. Later, I completed my secondary
-                            high schooling in 2021, specializing in PCM (Physics,
-                            Chemistry, and Mathematics), with 70.6% marks, also
-                            from the CBSE board.
+                           I am currently in the final year of my B.Tech, maintaining an aggregate of 70%. Prior to this, I completed my Intermediate in 2021 with the CBSE board, specializing in PCM, and secured 70.6% and  High School in 2019 from the CBSE board with 82.6% marks.
                         </p>
                     </div>
                 </div>
@@ -111,10 +104,7 @@ export const About = () => {
 
                     <div className="hobby-para" >
                         <p>
-                            In my free time I enjoy playing role-play games and watching isekai anime.
-                            Both let me explore imaginative worlds and exciting adventures,
-                            offering a fun escape from reality and sparking my creativity and engage
-                            with complex storylines.
+                          In my free time I play cricket or I do watch anime.
 
                         </p>
                     </div>

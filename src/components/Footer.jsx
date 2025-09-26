@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Footer.scss';
 import { NavLink } from 'react-router-dom'
-import facebook from './fimages/footer_facebook.webp';
-import x from './fimages/footer_x.webp';
+import github from './fimages/footer_github.webp';
 import linkedin from './fimages/footer_linkedin.webp';
 import mail from './fimages/footer_mail.webp';
 
@@ -41,18 +40,13 @@ export const Footer = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="#">
-                <img src={facebook} alt='facebook' />
+               <NavLink to="https://github.com/mithun-ctrl">
+                <img src={github} alt='github' />
               </NavLink>
             </li>
             <li>
               <NavLink to="mailto:itsmithun01@gmail.com">
                 <img src={mail} alt='mail' />
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="https://x.com/IgrisTheRedd" target='_blank'>
-                <img src={x} alt='x' />
               </NavLink>
             </li>
           </ul>
@@ -71,7 +65,7 @@ export const Footer = () => {
         <div className="footer-section">
           <h4>Contact Info</h4>
           <p>Email: itsmithun01@gmail.com</p>
-          <p>Phone: +918707xxx485</p>
+          <p>Phone: +918707300485</p>
           <p>Address: Prayagraj, Uttar Pradesh India</p>
         </div>
       </div>
