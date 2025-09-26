@@ -1,0 +1,298 @@
+// Variables
+$primary-background-color: #FFFFFF;
+$secondary-text-color: #7e2828;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin section-container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin heading-style {
+    max-width: fit-content;
+    color: $primary-background-color;
+    font-size: 6rem;
+    font-weight: 900;
+    -webkit-text-stroke: $secondary-text-color 2px;
+}
+
+@mixin para-box {
+    margin-top: 3rem;
+    width: 40vw;
+    border-radius: 10px;
+    padding: 15px 15px 15px 15px;
+    transition: 0.3s;
+    p {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #7e2828;
+    }
+}
+
+// Main Containers
+.container-introduction,
+.container-education,
+.container-skill,
+.container-hobby {
+    @include section-container;
+
+    // Introduction & Skill Image Styles
+    .introduction-image-box,
+    .skill-image-box {
+        margin-left: 100px;
+               
+        img {
+            height: 70vh;
+            width: 36vw;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    // Education & Hobby Image Styles
+    .education-image-box,
+    .hobby-image-box {
+        margin-left: auto;
+        margin-right: 6rem;
+              
+        img {
+            height: 70vh;
+            width: 35vw;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    // Text Box Styles
+    .introduction-text-box,
+    .skill-text-box {
+        margin-left: 40px;
+                
+        .introduction-heading, .skill-heading {
+            h1 {
+                @include heading-style;
+            }
+        }
+
+        .introduction-para {
+            @include para-box;
+        }
+    }
+
+    .education-text-box,
+    .hobby-text-box {
+        margin-top: 3.5rem;
+        margin-left: 8rem;
+
+        .education-heading,
+        .hobby-heading {
+            h1 {
+                @include heading-style;
+                margin-left: 20px
+            }
+        }
+
+        .education-para,
+        .hobby-para {
+            @include para-box;
+        }
+    }
+
+    // Skills Section
+   
+    .skill-para {
+        margin-top: 3rem;
+        width: 40vw;
+        border-radius: 10px;
+
+        .skills-container {
+            display: flex;
+            gap: 30px;
+            .skill-box {
+                background-color: $primary-background-color;
+                border-radius: 10px;
+                padding: 5px 15px;
+                transition: all 0.3s ease;
+                max-width: fit-content;
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+                }
+
+                .skill-title {
+                    color: $secondary-text-color;
+                    font-size: 1.7rem;
+                    margin:auto;
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                    max-width: fit-content;
+                }
+
+                .skill-circle {
+                    position: relative;
+                    width: 150px;
+                    height: 150px;
+                    margin: 0;
+                    
+                    svg {
+                        width: 150px;
+                        height: 150px;
+                        transform: rotate(-90deg);
+
+                        circle {
+                            width: 100%;
+                            height: 100%;
+                            fill: none;
+                            stroke-width: 10;
+                            stroke-linecap: round;
+                            transform: translate(5px, 5px);
+                            
+                            &:first-child {
+                                stroke: rgba($secondary-text-color, 0.5);
+                            }
+                            
+                            &:nth-child(2) {
+                                stroke: $secondary-text-color;
+                                stroke-dasharray: 440;
+                                transition: stroke-dashoffset 1s ease;
+                            }
+                        }
+                    }
+
+                    .percent {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+
+                        h2 {
+                            color: $secondary-text-color;
+                            font-size: 1.8rem;
+                            font-weight: 700;
+                            
+                            span {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1400px) {
+    .container-introduction,
+    .container-education,
+    .container-skill,
+    .container-hobby {
+        .introduction-image-box,
+        .skill-image-box,
+        .education-image-box,
+        .hobby-image-box {
+            img {
+                height: 60vh;
+                width: 30vw;
+            }
+        }
+
+        .introduction-text-box,
+        .skill-text-box,
+        .education-text-box,
+        .hobby-text-box {
+            .introduction-heading,
+            .education-heading,
+            .hobby-heading {
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container-introduction,
+    .container-education,
+    .container-skill,
+    .container-hobby {
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 1rem;
+
+        .introduction-image-box,
+        .skill-image-box,
+        .education-image-box,
+        .hobby-image-box {
+            margin: 0;
+            
+            img {
+                width: 80vw;
+                height: auto;
+            }
+        }
+
+        .introduction-text-box,
+        .skill-text-box,
+        .education-text-box,
+        .hobby-text-box {
+            margin: 2rem 0;
+            width: 100%;
+
+            .introduction-para,
+            .education-para,
+            .hobby-para,
+            .skill-para {
+                width: 80vw;
+                margin: 2rem auto;
+            }
+        }
+
+        .skill-para {
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container-introduction,
+    .container-education,
+    .container-skill,
+    .container-hobby {
+        .introduction-text-box,
+        .skill-text-box,
+        .education-text-box,
+        .hobby-text-box {
+            .introduction-heading,
+            .education-heading,
+            .hobby-heading {
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .skill-para {
+            .skills-container {
+                flex-direction: column;
+
+                .skill-box {
+                    max-width: 300px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

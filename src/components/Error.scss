@@ -1,0 +1,95 @@
+$white: #FFFFFF;
+$dark-brown: #7e2828;
+@use "sass:color";
+
+.container-error{
+    // background-color: #6200EE;
+    margin: 90px auto 150px auto;
+    display: flex;
+    .left-box-error{
+        margin-left: 7rem;
+        max-width: fit-content;
+        img{
+            width: 30vw;
+            height: 60vh;
+        }
+    }
+
+    .right-box-error{
+        max-width: 50vw;
+        margin-left: auto;
+        margin-right: 9rem;
+        
+        .error-404{ 
+            max-width: fit-content;
+            text-align: center;
+            // background-color: #000000;
+            min-height: 60vh;
+            img{
+                height: 40vh;
+                width: 45vw;
+            }
+
+            h1{
+                font-size: 20rem;
+                color: $white;
+                -webkit-text-stroke: $dark-brown 2px;
+            }
+
+            h6{  
+                margin-top: 0rem;
+                font-size: 1.5rem;
+                font-weight: 400;
+                text-transform: capitalize;
+                max-width: fit-content;
+                margin: auto;
+            }
+            p{
+               width: 30vw;
+               margin: auto;
+               text-rendering: optimizeSpeed;
+               font-size: 14px;
+               font-weight: 400;
+            }
+
+            ul{
+                display: flex;
+                gap: 2rem;
+                max-width: fit-content;
+                margin: 2rem auto 0 auto;
+                li{
+                    max-width: fit-content;
+                    list-style: none;
+
+                    &:last-child{
+                       a{
+                        background-color: $white;
+                        color: $dark-brown;
+                        border: 2px solid $dark-brown;
+
+                        &:hover{
+                            background-color: color.scale($white, $lightness: -3%);
+                        }
+                       }
+                    }
+                    
+                    a{  
+                        background-color: $dark-brown;
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 17px;
+                        padding: 10px 20px;
+                        gap:3rem;
+                        border: 2px solid $dark-brown;
+                        transition: 0.2s ease;
+
+                        &:hover{
+                            background-color: color.scale($dark-brown, $lightness: -20%);
+                        }                        
+                    }
+                }
+            }
+
+        }
+    }
+}

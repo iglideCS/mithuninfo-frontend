@@ -1,0 +1,107 @@
+$white: #FFFFFF;
+$blue: #6200EE;
+$dark-brown: #7e2828;
+@use "sass:color";  
+
+.box {
+    max-height: 80vh;
+    width: 30vw;
+    margin: 110px auto 120px auto;
+    border-radius: 15px;
+    box-shadow: 0px 2px 20px -9px $dark-brown;
+    h1 {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: fit-content;
+        font-weight: 700;
+        font-size: 35px;
+    }
+
+    .form-login {
+
+        input {
+            width: 20vw;
+            outline: none;
+            padding: 10px 20px 10px 5px;
+            border: 2px solid $dark-brown;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 5px;
+            color: $dark-brown;
+
+            &::placeholder{
+                color: color.scale($dark-brown, $lightness: 50%);
+            }
+            
+            &:focus {
+
+                border: 2px solid #c49cfb;
+
+
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .email {
+            margin: 35px auto 35px auto;
+            max-width: 73%;
+
+        }
+
+
+        .password {
+            max-width: 73%;
+            margin: auto;
+        }
+
+        .forget-password {
+            max-width: 73%;
+            margin: 10px auto;
+
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+                font-size: 14px;
+                font-weight: 400;
+                color: #7e28285c;
+                pointer-events: none;
+            }
+        }
+
+        .btn-login {
+            margin: 40px auto 50px auto;
+            max-width: 75%;
+
+            .btn {
+                width: 100%;
+                font-family: "Poppins", sans-serif;
+                color: $white;
+                padding: 7px 20px;
+                border-radius: 6px;
+                font-size: 20px;
+                border: none;
+                background: linear-gradient(to right,
+                        #798645 0%,
+                        #7e2828 50%,
+                        #798645 50%,
+                        #7e2828 100%);
+                background-size: 200% 100%;
+                background-position: 0% 0%;
+                transition: background-position 0.3s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                    background-position: 100% 0%;
+                }
+            }
+        }
+    }
+}
+
+

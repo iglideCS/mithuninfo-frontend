@@ -1,0 +1,275 @@
+$white: #FFFFFF;
+$blue: #6200EE;
+$red: #B00020;
+$dark-brown: #7e2828;
+@use "sass:color";  
+
+:root {
+    background-color: $white;
+    text-rendering: optimizeSpeed;
+}
+
+#box-navbar {
+    overflow: visible;
+    background-color: #ffffff00;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px 5px 5px 5px;
+    max-width: 1400px;
+    margin: 10px auto;
+    position: relative;
+    @media (max-width: 1024px) {
+        width: 100%;
+        margin: 0;
+    }
+
+    #logo-box {
+        margin: 0 150px 0 40px;
+        padding: 0 20px;
+
+        @media (max-width: 1024px) {
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo {
+
+            img {
+                width: auto;
+                height: 3.2rem;
+                animation: logoRotate 15s linear infinite;
+            }
+        }
+    }
+
+    .nav-content {
+        display: flex;
+        align-items: center;
+        flex: 1;
+
+        @media (max-width: 1024px) {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $white;
+            flex-direction: column;
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            z-index: 1000;
+            padding: 0;
+
+            &.show {
+                transform: scaleY(1);
+                padding: 20px;
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        border-radius: 100px;
+        padding: 15px 20px;
+        margin: 0 auto;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            margin: 20px 0;
+            box-shadow: none;
+        }
+
+        li {
+            flex-direction: row;
+            list-style: none;
+            margin: auto 20px;
+
+            @media (max-width: 1024px) {
+                margin: 10px 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: $dark-brown;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -4px;
+                    left: 0;
+                    background-color: $blue;
+                    transition: width 0.3s ease;
+                    @media (max-width: 1024px) {
+                        transition: none;
+                        background-color: color.scale($dark-brown, $lightness: 100%)
+                    }
+                }
+
+                &:hover {
+                    color: $blue;
+                    @media (max-width: 1024px) {
+                        color: #7e2828;
+                    }
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #login-reg-box {
+        display: flex;
+        margin-left: 120px;
+        margin-right: 50px;
+        padding: 2px 20px 5px;
+        border-radius: 100px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        @media (max-width: 1024px) {
+            margin: 0;
+            width: 100%;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        ul {
+            margin: 5px 8px 0px 8px;
+            display: flex;
+            background-color: $white;
+            gap: 15px;
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                margin: 0;
+            }
+
+            .logout-nav{
+                padding: 10px 6px;
+            }
+
+            .login-nav{
+                margin: auto;
+                a{
+                   margin-top: 50px;
+                }
+            }
+
+            li {
+                list-style: none;
+
+                @media (max-width: 1024px) {
+                    margin: 10px 0;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                a {
+                    max-width: fit-content;
+                    text-decoration: none;
+                    color: $dark-brown;
+                    position: relative;
+
+                    &:not(.register)::after {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        bottom: -4px;
+                        left: 0;
+                        background-color: $blue;
+                        transition: width 0.3s ease;
+                    }
+
+                    &:not(.register):hover::after {
+                        width: 100%;
+                    }
+                }
+
+                .register {
+                    background-color: $dark-brown;
+                    color: $white;
+                    padding: 11px;
+                    text-wrap: nowrap;
+                    border-radius: 100px;
+                    position: relative;
+                    right: -10%;
+                    display: inline-block;
+
+                    @media (max-width: 1024px) {
+                        width: 200px;
+                        text-align: center;
+                        position: relative;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-nav-btn {
+        display: none;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 20px;
+        z-index: 1001;
+        padding: 8px;
+        border-radius: 50%;
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        @media (max-width: 1024px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        .mobile-nav-icon {
+            width: 2rem;
+            height: 2rem;
+            color: $dark-brown;
+            transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .mobile-nav-icon[name="close"] {
+            display: none;
+        }
+    }
+
+    &.nav-active {
+        .mobile-nav-btn {
+            .mobile-nav-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@keyframes logoRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

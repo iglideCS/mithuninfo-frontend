@@ -1,0 +1,99 @@
+$white: #FFFFFF;
+$primary-text-color: #6200EE;
+$dark-brown: #7e2828;
+@use "sass:color";  
+
+.box-reg {
+    background-color: $white;
+    max-height: 70vh;
+    width: 30vw;
+    margin-left: 0px;
+    border-radius: 15px;
+    margin: 80px auto 120px auto;
+    box-shadow: 0px 2px 20px -9px $dark-brown;
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: $dark-brown;
+    }
+
+    input {
+        width: 20vw;
+        outline: none;
+        padding: 10px 20px 10px 5px;
+        border: 2px solid $dark-brown;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 5px;
+        color: $dark-brown;
+
+        &::placeholder {
+            color: color.scale($dark-brown, $lightness: 50%);
+        }
+
+        &:focus {
+            border: 2px solid #c49cfb;
+        }
+    }
+
+    h1 {
+        margin: auto;
+        margin-top: 20px;
+        max-width: fit-content;
+        font-weight: 700;
+        font-size: 35px;
+        color: $dark-brown;
+    }
+
+    .reg-form {
+        margin-top: 30px;
+
+        .username {
+            max-width: 73%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .reg-email {
+            max-width: 73%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .reg-password {
+            max-width: 73%;
+            margin: auto;
+            margin-bottom: 35px;
+        }
+
+        .reg-btn {
+            max-width: 75%;
+            margin: 10px auto 45px auto;
+
+            .rbtn {
+                padding: 7px 20px;
+                border: none;
+                color: $white;
+                border-radius: 7px;
+                font-size: 20px;
+                width: 100%;
+                font-family: "Poppins", sans-serif;
+                background: linear-gradient(to right,
+                        #798645 0%,
+                        #7e2828 50%,
+                        #798645 50%,
+                        #7e2828 100%);
+                background-size: 200% 100%;
+                background-position: 0% 0%;
+                transition: background-position 0.3s ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                    background-position: 100% 0%;
+                }
+            }
+        }
+    }
+}
+

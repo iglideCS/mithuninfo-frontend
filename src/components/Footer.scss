@@ -1,0 +1,140 @@
+$white: #FFFFFF;
+$blue: #6200EE;
+$dark-brown: #7e2828;
+
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.footer {
+    background-color: $white;
+    color: $dark-brown;
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid $dark-brown;
+    border-bottom: none;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+    will-change: opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out 0.1s forwards;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+
+    .quick-links {
+        margin-top: 1rem;
+        display: block;
+    }
+
+    ul {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+
+            a {
+                color: $dark-brown;
+                text-decoration: none;
+                transition: all 0.3s ease;
+
+                img {
+                    height: 36px;
+                    width: 36px;
+                    transform: translateY(0);
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    h3 {
+        margin-left: 10px;
+        max-width: fit-content;
+        color: $dark-brown;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+}
+
+.footer-bottom {
+    background-color: $white;
+    padding: 20px;
+    text-align: center;
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .footer,
+    .footer-content {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+
+.footer,
+.footer-content,
+.footer-section img {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.page-transition {
+    .footer {
+        opacity: 1;
+        transform: none;
+    }
+}

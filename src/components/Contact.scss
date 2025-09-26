@@ -1,0 +1,125 @@
+$white: #FFFFFF;
+$dark-brown: #7e2828;
+
+section {
+    overflow: hidden;
+}
+
+.heading-contact {
+    max-width: fit-content;
+    margin-left: 120px;
+    margin-top: 30px;
+    span {
+        font-size: 40px;
+        font-weight: 700;
+        color: $dark-brown;
+    }
+}
+
+.container-contact {
+    margin-top: 10px;
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .box-contact-img {
+        max-width: fit-content;
+        margin-right: auto;
+        margin-left: 100px;
+
+        img {
+            width: 35rem;
+            height: 35rem;
+        }
+    }
+
+    .box-contact-form {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: 100px;
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+
+        .username-contact {
+            max-width: 100%;
+            margin-bottom: 30px;
+
+            
+        }
+
+        .email-contact {
+            max-width: 100%;
+            margin-bottom: 30px;
+          
+        }
+
+        .message-contact {
+            max-width: fit-content;
+            margin-bottom: 30px;
+        }
+        input {
+            width: 20vw;
+            outline: none;
+            padding: 10px 20px 10px 5px;
+            border: 2px solid $dark-brown;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 5px;
+            color: $dark-brown;
+
+            &:focus{
+                border: 2px solid #c49cfb;
+            }
+        }
+
+        textarea {
+            font-family: "Poppins", sans-serif;
+            outline: none;
+            resize: none;
+            padding: 5px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 3px;
+            width: 30vw;
+            border: 2px solid $dark-brown;
+
+            &:focus{
+                border: 2px solid #c49cfb;
+            }
+        }
+
+        .btn-contact {
+            max-width: 100%;
+            
+            button {
+                border: 2px solid $white;
+                padding: 10px 14px;
+                border-radius: 7px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+                transition: 0.3s;
+                color: $white;
+                background: linear-gradient(to right,
+                #798645 0%,
+                #7e2828 50%,
+                #798645 50%,
+                #7e2828 100%
+                );
+
+                background-size: 200% 100%;
+                background-position: 0% 0%;
+                transition: 0.5s ease;
+
+                &:hover {
+                    cursor: pointer;
+                    background-position: 100% 0%;
+                }
+            }
+        }
+    }
+}
+
