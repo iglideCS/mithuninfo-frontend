@@ -13,6 +13,7 @@ import { AdminLayout } from "./components/Layout/AdminLayout";
 import { AdminUsers } from "./pages/AdminUsers";
 import { AdminContacts } from "./pages/AdminContacts";
 import { AdminAccess } from "./pages/AdminAccess";
+import { FigmaDesign } from "./pages/FigmaDesign";
 
 const PageWrapper = () => {
   const location = useLocation();
@@ -28,14 +29,15 @@ const PageWrapper = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/achievement" element={<Achievement />} />
+          <Route path="/figma-design" element={<FigmaDesign/>}/>
           <Route path="/admin" element={<AdminLayout />} />
           <Route path="/admin/users" element={<AdminUsers />} />
           <Route path="/admin/contacts" element={<AdminContacts />} />
           <Route path="/admin/access" element={<AdminAccess />} />
         </Route>
         <Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
         <Route path="/logout" element={<Logout />} />
         <Route path="*" element={<Error />} />

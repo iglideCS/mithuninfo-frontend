@@ -1,0 +1,163 @@
+$primary-background-color: #FFFFFF;
+$secondary-text-color: #7e2828;
+
+.container-achievement {
+    max-width: 100%;
+    background-color: $primary-background-color;
+    padding: 10px;
+    margin: 60px auto 100px auto;
+    overflow: hidden;
+    .card {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        padding: 20px;
+        max-width: 85vw;
+        border: 2px solid $primary-background-color;
+        margin: auto;
+        transition: 0.5s;
+
+        img{
+            border-radius: 7px;
+            border: 1px solid $secondary-text-color;
+        }
+
+        .img-achievement {
+            // display: flex;
+            max-width: fit-content;
+            padding: 15px;
+            transition: 0.4s;
+            max-height: fit-content;
+            // &:hover{
+            //     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            // }
+            img {
+                width: 50vw;
+            }
+        }
+
+        .details-box {
+            max-width: fit-content;
+            padding: 15px 20px 35px 15px    ;
+            margin: auto;
+            transition: 0.2s;
+            border-radius: 10px;
+            .provider,
+             .duration, 
+             .project,
+             .description,
+             .course{
+                p{
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    line-height: 30px;
+                    color: #7e2828;
+                    span{
+                        font-size: 18px;
+                        font-weight: 600;
+
+                    }
+                }
+            }
+
+            .download-certificate {
+                max-width: fit-content;
+                margin-top: 30px;
+                a {
+                    text-decoration: none;
+                    font-size: 16px;
+                    border: 2px solid $secondary-text-color;
+                    padding: 10px 10px;
+                    border-radius: 5px;
+                    background-color: $secondary-text-color;
+                    color: $primary-background-color;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: $secondary-text-color;
+                        background-color: $primary-background-color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    
+    .container-achievement {
+        max-width: 100%;
+        background-color: $primary-background-color;
+        padding: 10px;
+        margin: 30px auto 10px auto;
+        overflow: hidden;
+        .card {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            max-width: 95vw;
+            margin: auto;
+            transition: 0.5s;
+    
+            .img-achievement {
+                max-width: fit-content;
+                padding: 20px;
+                margin: auto;
+                box-shadow: none;
+                transition: 0.4s;
+                max-height: fit-content;
+                img {
+                    width: 80vw;
+                }
+            }
+    
+            .details-box {
+                max-width: fit-content;
+                padding: 15px 20px 25px 15px    ;
+                margin: auto;
+                transition: 0.4s;
+                box-shadow: none;
+                .provider,
+                 .duration, 
+                 .project,
+                 .description,
+                 .course{
+                    p{
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                        line-height: 30px;
+                        span{
+                            font-size: 18px;
+                            font-weight: 600;
+    
+                        }
+                    }
+                }
+    
+                .download-certificate {
+                    max-width: fit-content;
+                    margin-top: 30px;
+                    a {
+                        text-decoration: none;
+                        font-size: 16px;
+                        border: 2px solid $secondary-text-color;
+                        padding: 10px 10px;
+                        border-radius: 5px;
+                        background-color: $secondary-text-color;
+                        color: $primary-background-color;
+                        transition: 0s;
+    
+                        &:focus {
+                            color: $secondary-text-color;
+                            background-color: $primary-background-color;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}

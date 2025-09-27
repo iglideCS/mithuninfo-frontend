@@ -26,6 +26,7 @@ export const Navbar = () => {
                     <ul className="nav-links">
                         <li><NavLink to="/" onClick={() => setShowMenu(false)}>Home</NavLink></li>
                         <li><NavLink to="/achievement" onClick={() => setShowMenu(false)}>Achievement</NavLink></li>
+                        <li><NavLink to="/figma-design" onClick={() => setShowMenu(false)}>Figma Design</NavLink></li>
                         <li><NavLink to="/about" onClick={() => setShowMenu(false)}>About</NavLink></li>
                         <li><NavLink to="/contact" onClick={() => setShowMenu(false)}>Contact</NavLink></li>
                     </ul>
